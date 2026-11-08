@@ -1,0 +1,19 @@
+# Збірка та тимчасові файли
+bin/
+build/
+cmake-build-*/
+*.o
+*.a
+*.so
+*.user
+*.user.*
+.vscode/
+.idea/
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Системні файли
+.DS_Store
+Thumbs.db
