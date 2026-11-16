@@ -201,7 +201,12 @@ void MainWindow::setupSecurityTab() {
     m_incidentsTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     m_incidentsTable->setSelectionMode(QAbstractItemView::SingleSelection);
     m_incidentsTable->setAlternatingRowColors(true);
-    m_incidentsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
+    m_incidentsTable->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
 
     connect(m_incidentsTable, &QTableWidget::itemSelectionChanged, this, &MainWindow::onIncidentSelectionChanged);
     connect(m_incidentsTable, &QTableWidget::cellDoubleClicked, this, [this](int, int) { onResolveIncident(); });
