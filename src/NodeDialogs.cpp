@@ -40,12 +40,12 @@ void AddNodeDialog::setupUi() {
     m_locationEdit->setText("Франкфурт (AWS eu-central-1)");
 
     m_cpuSpin = new QDoubleSpinBox(this);
-    m_cpuSpin->setRange(0.0, 1000.0);
+    m_cpuSpin->setRange(0.0, 100.0);
     m_cpuSpin->setValue(20.0);
     m_cpuSpin->setSuffix(" %");
 
     m_ramSpin = new QDoubleSpinBox(this);
-    m_ramSpin->setRange(0.0, 1000.0);
+    m_ramSpin->setRange(0.0, 100.0);
     m_ramSpin->setValue(35.0);
     m_ramSpin->setSuffix(" %");
 
