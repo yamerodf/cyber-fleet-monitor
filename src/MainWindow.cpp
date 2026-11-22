@@ -669,7 +669,7 @@ void MainWindow::updateNodeDetails(int nodeId) {
         QPushButton:hover { background-color: #1D4ED8; }
         QPushButton:pressed { background-color: #1E40AF; }
     )");
-    m_detailActionBtn->disconnect();
+    disconnect(m_detailActionBtn, &QPushButton::clicked, this, nullptr);
     connect(m_detailActionBtn, &QPushButton::clicked, this, &MainWindow::onEditNodeTelemetry);
 }
 
@@ -732,7 +732,7 @@ void MainWindow::updateIncidentDetails(int incidentId) {
         QPushButton:pressed { background-color: #115E59; }
         QPushButton:disabled { background-color: #94A3B8; border-color: #94A3B8; color: #E2E8F0; }
     )");
-    m_detailActionBtn->disconnect();
+    disconnect(m_detailActionBtn, &QPushButton::clicked, this, nullptr);
     connect(m_detailActionBtn, &QPushButton::clicked, this, &MainWindow::onResolveIncident);
 }
 
